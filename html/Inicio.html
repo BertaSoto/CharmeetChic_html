@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charmes et Chic - Ecommerce</title>
-    <!-- Enlace a tu archivo CSS (lo agregarás después) -->
-    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <!-- Encabezado -->
-    <header>
-        <div class="logo">
+    <div>
+        <div>
             <img src="ruta-a-tu-logo.png" alt="Logo de Charmes et Chic">
         </div>
-        <nav>
+        <div>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#catalogo">Catálogo</a></li>
@@ -21,76 +19,71 @@
                 <li><a href="#reparacion">Reparación de joyas</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
-        </nav>
-        <div class="usuario-carrito">
+        </div>
+        <div>
             <a href="#buscar"><img src="buscar-icono.png" alt="Buscar"></a>
             <a href="#usuario"><img src="usuario-icono.png" alt="Usuario"></a>
             <a href="#carrito"><img src="carrito-icono.png" alt="Carrito"></a>
         </div>
-    </header>
+    </div>
 
     <!-- Sección principal -->
-    <main>
-        <section id="inicio" class="bienvenida">
-            <h1>Bienvenidos a nuestra tienda</h1>
-            <p>Joyería exclusiva que te encantará.</p>
-            <img src="imagen-joyas-principal.jpg" alt="Joyería exclusiva">
-        </section>
+    <div id="inicio">
+        <h1>Bienvenidos a nuestra tienda</h1>
+        <p>Joyería exclusiva que te encantará.</p>
+        <img src="imagen-joyas-principal.jpg" alt="Joyería exclusiva">
+    </div>
 
-        <!-- Catálogo de productos -->
-        <section id="catalogo" class="productos">
-            <h2>Catálogo</h2>
-            <div class="productos-lista">
-                <!-- Producto 1 -->
-                <div class="producto">
-                    <img src="producto1.jpg" alt="Anillo de perlas">
-                    <p>Anillo de perlas</p>
-                    <p>$100.00</p>
-                    <button>Añadir al carrito</button>
-                </div>
-                <!-- Producto 2 -->
-                <div class="producto">
-                    <img src="producto2.jpg" alt="Collar de cruz">
-                    <p>Collar de cruz</p>
-                    <p>$150.00</p>
-                    <button>Añadir al carrito</button>
-                </div>
-                <!-- Más productos aquí -->
+    <!-- Catálogo de productos -->
+    <div id="catalogo">
+        <h2>Catálogo</h2>
+        <div>
+            <!-- Producto 1 -->
+            <div>
+                <img src="producto1.jpg" alt="Anillo de perlas">
+                <p>Anillo de perlas</p>
+                <p>$100.00</p>
+                <button>Añadir al carrito</button>
             </div>
-        </section>
+            <!-- Producto 2 -->
+            <div>
+                <img src="producto2.jpg" alt="Collar de cruz">
+                <p>Collar de cruz</p>
+                <p>$150.00</p>
+                <button>Añadir al carrito</button>
+            </div>
+        </div>
+    </div>
 
-        <!-- Personalización de joyas -->
-        <section id="personalizar" class="personalizacion">
-            <h2>Personaliza tus joyas</h2>
-            <p>Haz que tu joya sea única con nuestra opción de personalización.</p>
-            <!-- Formulario o enlaces de personalización -->
-        </section>
+    <!-- Personalización de joyas -->
+    <div id="personalizar">
+        <h2>Personaliza tus joyas</h2>
+        <p>Haz que tu joya sea única con nuestra opción de personalización.</p>
+    </div>
 
-        <!-- Reparación de joyas -->
-        <section id="reparacion" class="reparacion">
-            <h2>Reparación de joyas</h2>
-            <p>¿Tu joya necesita reparación? Nosotros la arreglamos.</p>
-            <!-- Formulario o detalles de reparación -->
-        </section>
+    <!-- Reparación de joyas -->
+    <div id="reparacion">
+        <h2>Reparación de joyas</h2>
+        <p>¿Tu joya necesita reparación? Nosotros la arreglamos.</p>
+    </div>
 
-        <!-- Sección de contacto -->
-        <section id="contacto" class="contacto">
-            <h2>Contacto</h2>
-            <form>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
+    <!-- Sección de contacto -->
+    <div id="contacto">
+        <h2>Contacto</h2>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
 
     <!-- Pie de página -->
-    <footer>
+    <div>
         <p>&copy; 2025 Charmes et Chic. Todos los derechos reservados.</p>
-    </footer>
+    </div>
 </body>
 </html>

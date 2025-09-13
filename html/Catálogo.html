@@ -2,88 +2,63 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charmes et Chic - Ecommerce</title>
+    <title>Charme et Chic - Catálogo</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Encabezado -->
-    <div>
-        <div>
-            <img src="ruta-a-tu-logo.png" alt="Logo de Charmes et Chic">
+    <div class="encabezado">
+        <div class="logo">
+            <img src="../img/LOGO.jpg" alt="Logo de Charme et Chic">
         </div>
-        <div>
+        <div class="menu">
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#catalogo">Catálogo</a></li>
-                <li><a href="#personalizar">Personalizar joyas</a></li>
-                <li><a href="#reparacion">Reparación de joyas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="personalizacion_reparacion.html">Personalización y Reparación de Joyas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="quienes_somos.html">Quiénes Somos</a></li>
+                <li><a href="registro_login.html">Registro / Login</a></li>
             </ul>
         </div>
-        <div>
-            <a href="#buscar"><img src="buscar-icono.png" alt="Buscar"></a>
-            <a href="#usuario"><img src="usuario-icono.png" alt="Usuario"></a>
-            <a href="#carrito"><img src="carrito-icono.png" alt="Carrito"></a>
+        <div class="iconos">
+            <a href="#"><img src="../img/buscar.png" alt="Buscar"></a>
+            <a href="#"><img src="../img/casa.png" alt="Usuario"></a>
+            <a href="carrito.html"><img src="../img/carrito-de-compras.png" alt="Carrito"></a>
         </div>
-    </div>
-
-    <!-- Sección principal -->
-    <div id="inicio">
-        <h1>Bienvenidos a nuestra tienda</h1>
-        <p>Joyería exclusiva que te encantará.</p>
-        <img src="imagen-joyas-principal.jpg" alt="Joyería exclusiva">
     </div>
 
     <!-- Catálogo de productos -->
-    <div id="catalogo">
-        <h2>Catálogo</h2>
-        <div>
+    <div class="catalogo">
+        <h2>Nuestro Catálogo</h2>
+        <div class="productos">
             <!-- Producto 1 -->
-            <div>
-                <img src="producto1.jpg" alt="Anillo de perlas">
-                <p>Anillo de perlas</p>
-                <p>$100.00</p>
+            <div class="producto">
+                <img src="../img/Anillo luna.jpg" alt="Anillo Luna">
+                <p class="nombre">Anillo Luna</p>
+                <p class="precio">$10.000</p>
                 <button>Añadir al carrito</button>
             </div>
             <!-- Producto 2 -->
-            <div>
-                <img src="producto2.jpg" alt="Collar de cruz">
-                <p>Collar de cruz</p>
-                <p>$150.00</p>
+            <div class="producto">
+                <img src="../img/Collar perlas.jpg" alt="Collar de perlas">
+                <p class="nombre">Collar de Perlas</p>
+                <p class="precio">$15.000</p>
+                <button>Añadir al carrito</button>
+            </div>
+            <!-- Más productos -->
+            <div class="producto">
+                <img src="../img/Aros Corazon.jpg" alt="Aros Corazones">
+                <p class="nombre">Aros de Plata</p>
+                <p class="precio">$8.000</p>
                 <button>Añadir al carrito</button>
             </div>
         </div>
     </div>
 
-    <!-- Personalización de joyas -->
-    <div id="personalizar">
-        <h2>Personaliza tus joyas</h2>
-        <p>Haz que tu joya sea única con nuestra opción de personalización.</p>
-    </div>
-
-    <!-- Reparación de joyas -->
-    <div id="reparacion">
-        <h2>Reparación de joyas</h2>
-        <p>¿Tu joya necesita reparación? Nosotros la arreglamos.</p>
-    </div>
-
-    <!-- Sección de contacto -->
-    <div id="contacto">
-        <h2>Contacto</h2>
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
-
     <!-- Pie de página -->
-    <div>
-        <p>&copy; 2025 Charmes et Chic. Todos los derechos reservados.</p>
+    <div class="footer">
+        <p>&copy; 2025 Charme et Chic. Todos los derechos reservados.</p>
     </div>
 </body>
 </html>

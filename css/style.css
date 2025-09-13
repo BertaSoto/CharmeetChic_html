@@ -137,3 +137,41 @@ body {
 .seccion img:hover {
     transform: scale(1.05);
 }
+/* Formulario de contacto */
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;  /* hace que los elementos vayan hacia abajo */
+    gap: 15px;              /* espacio entre cada campo */
+    max-width: 500px;       /* ancho máximo */
+    margin: 0 auto;         /* lo centra en la página */
+}
+
+.formulario-contacto label {
+    text-align: left;
+    font-weight: bold;
+    color: #444;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    font-size: 1em;
+    width: 100%;
+}
+
+.formulario-contacto button {
+    background: #c49b63;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.formulario-contacto button:hover {
+    background: #a87d4f;
+}

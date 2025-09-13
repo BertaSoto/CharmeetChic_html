@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charme et Chic - Contacto</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/contacto.js" defer></script>
 </head>
 <body>
     <!-- Encabezado -->
@@ -30,10 +31,11 @@
     </div>
 
     <!-- Formulario de contacto -->
-    <div class="seccion contacto">
-        <h2>Contáctanos</h2>
+    <div class="seccion centrada">
+        <h2>📩 Contáctanos</h2>
         <p>¿Tienes dudas, quieres personalizar una joya o necesitas ayuda? Escríbenos:</p>
-        <form>
+        
+        <form id="formContacto" class="formulario-contacto">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
 
@@ -45,6 +47,14 @@
 
             <button type="submit">Enviar</button>
         </form>
+
+        <!-- Aquí aparecerán los mensajes de validación -->
+        <div id="mensajeExito" style="display:none; color:green; margin-top:15px;">
+            ✅ ¡Tu mensaje fue enviado correctamente!
+        </div>
+        <div id="mensajeError" style="display:none; color:red; margin-top:15px;">
+            ⚠️ Por favor completa todos los campos correctamente.
+        </div>
     </div>
 
     <!-- Pie de página -->

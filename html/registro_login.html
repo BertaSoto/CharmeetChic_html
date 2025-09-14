@@ -1,89 +1,161 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charmes et Chic - Ecommerce</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charme et Chic - Registro / Login</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- Estilos mínimos para la grilla y panel, respetando tu look -->
+    <style>
+        .auth-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px
+        }
+
+        .panel {
+            background: #fff;
+            border-radius: 14px;
+            padding: 22px;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, .06)
+        }
+
+        .panel h3 {
+            margin: 0 0 14px;
+            color: #2b1c0c
+        }
+
+        .help {
+            font-size: .9em;
+            color: #6b6b6b
+        }
+
+        .inline {
+            display: flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .toggle-pass {
+            border: 1px solid #bbb;
+            background: #fff;
+            border-radius: 8px;
+            padding: 6px 10px;
+            cursor: pointer
+        }
+
+        .btn-primary {
+            background: #c49b63;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 14px;
+            cursor: pointer
+        }
+
+        .btn-primary:hover {
+            background: #a87d4f
+        }
+
+        @media (max-width:900px) {
+            .auth-grid {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <!-- Encabezado -->
-    <div>
-        <div>
-            <img src="ruta-a-tu-logo.png" alt="Logo de Charmes et Chic">
+    <!-- Encabezado-->
+    <div class="encabezado">
+        <div class="logo">
+            <img src="../img/LOGO.jpg" alt="Logo de Charme et Chic" />
         </div>
-        <div>
+        <div class="menu">
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#catalogo">Catálogo</a></li>
-                <li><a href="#personalizar">Personalizar joyas</a></li>
-                <li><a href="#reparacion">Reparación de joyas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="quienes_somos.html" class="activo">Quiénes Somos</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="personalizacion_reparacion.html">Personalización y Reparación</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </div>
-        <div>
-            <a href="#buscar"><img src="buscar-icono.png" alt="Buscar"></a>
-            <a href="#usuario"><img src="usuario-icono.png" alt="Usuario"></a>
-            <a href="#carrito"><img src="carrito-icono.png" alt="Carrito"></a>
+        <div class="iconos">
+            <a href="registro_login.html"><img src="../img/perfil.png" alt="Perfil" /></a>
+            <a href="#"><img src="../img/buscar.png" alt="Buscar" /></a>
+            <a href="../inicio.html"><img src="../img/casa.png" alt="Inicio" /></a>
+            <a href="carrito.html"><img src="../img/carrito-de-compras.png" alt="Carrito" /></a>
         </div>
     </div>
 
-    <!-- Sección principal -->
-    <div id="inicio">
-        <h1>Bienvenidos a nuestra tienda</h1>
-        <p>Joyería exclusiva que te encantará.</p>
-        <img src="imagen-joyas-principal.jpg" alt="Joyería exclusiva">
-    </div>
+    <!-- Contenido -->
+    <div class="seccion">
+        <div class="auth-grid">
+            <!-- Login -->
+            <div class="panel">
+                <h3>Acceder</h3>
+                <form id="formLogin" class="formulario-contacto" novalidate>
+                    <label for="loginUser">Nombre de usuario o correo electrónico *</label>
+                    <input id="loginUser" type="text" autocomplete="username" />
+                    <small id="errLoginUser" class="error-msg" aria-live="polite"></small>
 
-    <!-- Catálogo de productos -->
-    <div id="catalogo">
-        <h2>Catálogo</h2>
-        <div>
-            <!-- Producto 1 -->
-            <div>
-                <img src="producto1.jpg" alt="Anillo de perlas">
-                <p>Anillo de perlas</p>
-                <p>$100.00</p>
-                <button>Añadir al carrito</button>
+                    <label for="loginPass">Contraseña *</label>
+                    <div class="inline">
+                        <input id="loginPass" type="password" minlength="6" autocomplete="current-password"
+                            style="flex:1" />
+                        <button type="button" class="toggle-pass" data-target="loginPass" aria-controls="loginPass"
+                            aria-pressed="false" title="Mostrar contraseña">👁</button>
+                    </div>
+                    <small id="errLoginPass" class="error-msg" aria-live="polite"></small>
+
+                    <div class="inline remember-row">
+                        <input id="remember" type="checkbox" />
+                        <label for="remember">Recuérdame</label>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Acceso</button>
+                    <p id="msgLogin" class="help" aria-live="polite"></p>
+                </form>
+
             </div>
-            <!-- Producto 2 -->
-            <div>
-                <img src="producto2.jpg" alt="Collar de cruz">
-                <p>Collar de cruz</p>
-                <p>$150.00</p>
-                <button>Añadir al carrito</button>
+
+            <!-- Registro -->
+            <div class="panel">
+                <h3>Registrarse</h3>
+                <form id="formRegistro" class="formulario-contacto" novalidate>
+                    <label for="regUser">Nombre de usuario *</label>
+                    <input id="regUser" type="text" autocomplete="username" />
+                    <small id="errRegUser" class="error-msg" aria-live="polite"></small>
+
+                    <label for="regEmail">Dirección de correo electrónico *</label>
+                    <input id="regEmail" type="email" autocomplete="email" />
+                    <small id="errRegEmail" class="error-msg" aria-live="polite"></small>
+
+                    <label for="regPass">Contraseña *</label>
+                    <div class="inline">
+                        <input id="regPass" type="password" minlength="6" autocomplete="new-password" style="flex:1" />
+                        <button type="button" class="toggle-pass" data-target="regPass" aria-controls="regPass"
+                            aria-pressed="false" title="Mostrar contraseña">👁</button>
+                    </div>
+                    <small id="errRegPass" class="error-msg" aria-live="polite"></small>
+
+                    <p class="help" style="margin:10px 0">
+                        Tus datos se utilizarán para procesar tu pedido y mejorar tu experiencia en el sitio.
+                    </p>
+
+                    <button type="submit" class="btn-primary">Registrarse</button>
+                    <p id="msgRegistro" class="help" aria-live="polite"></p>
+                </form>
             </div>
         </div>
     </div>
 
-    <!-- Personalización de joyas -->
-    <div id="personalizar">
-        <h2>Personaliza tus joyas</h2>
-        <p>Haz que tu joya sea única con nuestra opción de personalización.</p>
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Charme et Chic. Todos los derechos reservados.</p>
     </div>
 
-    <!-- Reparación de joyas -->
-    <div id="reparacion">
-        <h2>Reparación de joyas</h2>
-        <p>¿Tu joya necesita reparación? Nosotros la arreglamos.</p>
-    </div>
-
-    <!-- Sección de contacto -->
-    <div id="contacto">
-        <h2>Contacto</h2>
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
-
-    <!-- Pie de página -->
-    <div>
-        <p>&copy; 2025 Charmes et Chic. Todos los derechos reservados.</p>
-    </div>
+    <script src="../js/registro_login.js"></script>
 </body>
+
 </html>

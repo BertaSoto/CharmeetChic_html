@@ -40,6 +40,40 @@ body {
     color: #a67c52;
 }
 
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    /* espacio entre icono y texto */
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu .icono-menu {
+    width: 18px;
+    /* tamaño del icono */
+    height: 18px;
+    /* mantiene cuadrado */
+    vertical-align: middle;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    /* espacio entre icono y texto */
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu .icono-menu {
+    width: 18px;
+    /* tamaño del icono */
+    height: 18px;
+    /* mantiene cuadrado */
+    vertical-align: middle;
+}
+
 /* Iconos (buscar, usuario, carrito) */
 .iconos {
     display: flex;

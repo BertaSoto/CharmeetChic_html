@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const mensajeExito = document.getElementById("mensajeExito");
     const mensajeError = document.getElementById("mensajeError");
 
-    form.addEventListener("submit", function(e) {
+    form.addEventListener("submit", function (e) {
         e.preventDefault(); // Evita recargar la página
 
         const nombre = document.getElementById("nombre").value.trim();

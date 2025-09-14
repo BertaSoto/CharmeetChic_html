@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charme et Chic - Contacto</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/contacto.js" defer></script>
+</head>
+<body>
+    <!-- Encabezado -->
+    <div class="encabezado">
+        <div class="logo">
+            <img src="../img/LOGO.jpg" alt="Logo de Charme et Chic">
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="../inicio.html">Inicio</a></li>
+                <li><a href="quienes_somos.html">Quiénes Somos</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="personalizacion_reparacion.html">Personalización y Reparación</a></li>
+                <li><a href="registro_login.html">Registro / Login</a></li>
+                <li><a href="contacto.html" class="activo">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="iconos">
+            <a href="#"><img src="../img/buscar.png" alt="Buscar"></a>
+            <a href="#"><img src="../img/casa.png" alt="Usuario"></a>
+            <a href="carrito.html"><img src="../img/carrito-de-compras.png" alt="Carrito"></a>
+        </div>
+    </div>
+
+    <!-- Formulario de contacto -->
+    <div class="seccion centrada">
+        <h2>Contáctanos</h2>
+        <p>¿Tienes dudas, quieres personalizar una joya o necesitas ayuda? Escríbenos:</p>
+        
+        <form id="formContacto" class="formulario-contacto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <!-- Aquí aparecerán los mensajes de validación -->
+        <div id="mensajeExito" style="display:none; color:green; margin-top:15px;">
+            ¡Tu mensaje fue enviado correctamente!
+        </div>
+        <div id="mensajeError" style="display:none; color:red; margin-top:15px;">
+            Por favor completa todos los campos correctamente.
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <div class="footer">
+        <p>&copy; 2025 Charme et Chic. Todos los derechos reservados.</p>
+    </div>
+</body>
+</html>

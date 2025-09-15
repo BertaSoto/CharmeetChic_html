@@ -29,6 +29,34 @@ document.addEventListener("DOMContentLoaded", () => {
         loginUser.value = remembered;
         rememberCb.checked = true;
     }
+    //  solo si hay valor recordado
+    if (remembered) {
+        loginUser.value = remembered;
+        rememberCb.checked = true;
+    } else {
+        loginUser.value = ""; // limpia usuario si no hay remember
+    }
+    loginPass.value = ""; // nunca persistir contraseña
+
+    // Manejar cambios en la casilla "Recuérdame" en el momento
+    rememberCb.addEventListener("change", () => {
+        const current = loginUser.value.trim();
+        if (rememberCb.checked) {
+            // guarda el usuario actual (si hay)
+            if (current) localStorage.setItem("rememberUser", current);
+        } else {
+            // olvida y limpia el campo
+            localStorage.removeItem("rememberUser");
+            loginUser.value = "";
+        }
+    });
+
+    window.addEventListener("pageshow", (e) => {
+        if (!localStorage.getItem("rememberUser")) {
+            loginUser.value = "";
+        }
+        loginPass.value = "";
+    });
 
     // -------- LOGIN --------
     const formLogin = document.getElementById("formLogin");

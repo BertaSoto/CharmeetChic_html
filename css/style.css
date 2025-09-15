@@ -40,39 +40,51 @@ body {
     color: #a67c52;
 }
 
-.menu a {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    /* espacio entre icono y texto */
-    text-decoration: none;
-    color: inherit;
-}
 
 .menu .icono-menu {
-    width: 18px;
-    /* tamaño del icono */
-    height: 18px;
-    /* mantiene cuadrado */
-    vertical-align: middle;
+    width: 26px;
+    /* mismo tamaño que los de la derecha */
+    height: 26px;
+    display: block;
+    object-fit: contain;
+    /* evita deformación si el PNG tiene “aire” */
+    opacity: .85;
+    transition: opacity .2s ease, transform .2s ease;
 }
+
+.menu a:hover .icono-menu {
+    opacity: 1;
+}
+
+
 
 .menu a {
     display: flex;
+    /* asegura alineación vertical del icono */
     align-items: center;
-    gap: 6px;
-    /* espacio entre icono y texto */
+    gap: 8px;
+    /* espacio icono-texto */
     text-decoration: none;
-    color: inherit;
+    color: #333;
+    padding: 8px 10px;
+    border-radius: 8px;
+    line-height: 1;
+    /* evita desalineo por altura de línea */
 }
 
-.menu .icono-menu {
-    width: 18px;
-    /* tamaño del icono */
-    height: 18px;
-    /* mantiene cuadrado */
-    vertical-align: middle;
+
+/* Ajuste especial para el icono de casa */
+.icono-casa {
+    width: 22px;
+    height: 22px;
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
 }
+
+.icono-casa:hover {
+    opacity: 1;
+}
+
 
 /* Iconos (buscar, usuario, carrito) */
 .iconos {
@@ -82,9 +94,10 @@ body {
 }
 
 .iconos img {
-    width: 32px;
-    height: auto;
+    width: 26px;
+    height: 26px;
     cursor: pointer;
+
 }
 
 /* ======= Catálogo ======= */
@@ -95,20 +108,27 @@ body {
 
 /* ======= Títulos de secciones ======= */
 .catalogo details summary {
-    font-size: 1.6rem;        /* más grande */
-    font-weight: bold;        /* más elegante */
-    text-align: left;         /* alineado a la izquierda */
+    font-size: 1.6rem;
+    /* más grande */
+    font-weight: bold;
+    /* más elegante */
+    text-align: left;
+    /* alineado a la izquierda */
     cursor: pointer;
     margin: 20px 0 10px 0;
-    color: #444;              /* tono sobrio */
+    color: #444;
+    /* tono sobrio */
     padding: 5px 10px;
-    border-left: 4px solid #a67c52; /* detalle elegante dorado/marrón */
+    border-left: 4px solid #a67c52;
+    /* detalle elegante dorado/marrón */
     border-radius: 3px;
-    list-style: none;         /* quita viñeta */
+    list-style: none;
+    /* quita viñeta */
 }
 
 .catalogo details[open] summary {
-    color: #a67c52; /* cambia color al abrir */
+    color: #a67c52;
+    /* cambia color al abrir */
 }
 
 /* Opcional: quita el triangulito feo y ponlo personalizado */
@@ -119,7 +139,8 @@ body {
 .productos {
     display: flex;
     justify-content: center;
-    align-items: stretch; /* misma altura */
+    align-items: stretch;
+    /* misma altura */
     gap: 30px;
     flex-wrap: wrap;
     margin-top: 20px;
@@ -131,7 +152,8 @@ body {
     padding: 15px;
     width: 200px;
     display: flex;
-    flex-direction: column; /* Para alinear verticalmente */
+    flex-direction: column;
+    /* Para alinear verticalmente */
     justify-content: space-between;
     text-align: center;
     background-color: #fff;
@@ -139,15 +161,18 @@ body {
 
 .producto img {
     width: 100%;
-    height: 180px;          /* mismo alto para todas */
-    object-fit: cover;      /* recorta sin deformar */
+    height: 180px;
+    /* mismo alto para todas */
+    object-fit: cover;
+    /* recorta sin deformar */
     border-radius: 5px;
 }
 
 .producto .nombre {
     font-weight: bold;
     margin: 10px 0 5px;
-    flex-grow: 1; /* ayuda a mantener espacio */
+    flex-grow: 1;
+    /* ayuda a mantener espacio */
 }
 
 .producto .precio {
@@ -163,7 +188,8 @@ body {
     padding: 8px 12px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: auto; /* empuja el botón al final */
+    margin-top: auto;
+    /* empuja el botón al final */
 }
 
 .producto button:hover {

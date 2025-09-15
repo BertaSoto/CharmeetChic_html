@@ -93,9 +93,33 @@ body {
     padding: 30px;
 }
 
+/* ======= Títulos de secciones ======= */
+.catalogo details summary {
+    font-size: 1.6rem;        /* más grande */
+    font-weight: bold;        /* más elegante */
+    text-align: left;         /* alineado a la izquierda */
+    cursor: pointer;
+    margin: 20px 0 10px 0;
+    color: #444;              /* tono sobrio */
+    padding: 5px 10px;
+    border-left: 4px solid #a67c52; /* detalle elegante dorado/marrón */
+    border-radius: 3px;
+    list-style: none;         /* quita viñeta */
+}
+
+.catalogo details[open] summary {
+    color: #a67c52; /* cambia color al abrir */
+}
+
+/* Opcional: quita el triangulito feo y ponlo personalizado */
+.catalogo summary::-webkit-details-marker {
+    display: none;
+}
+
 .productos {
     display: flex;
     justify-content: center;
+    align-items: stretch; /* misma altura */
     gap: 30px;
     flex-wrap: wrap;
     margin-top: 20px;
@@ -106,24 +130,44 @@ body {
     border-radius: 8px;
     padding: 15px;
     width: 200px;
+    display: flex;
+    flex-direction: column; /* Para alinear verticalmente */
+    justify-content: space-between;
     text-align: center;
     background-color: #fff;
 }
 
 .producto img {
     width: 100%;
-    height: auto;
+    height: 180px;          /* mismo alto para todas */
+    object-fit: cover;      /* recorta sin deformar */
     border-radius: 5px;
 }
 
 .producto .nombre {
     font-weight: bold;
     margin: 10px 0 5px;
+    flex-grow: 1; /* ayuda a mantener espacio */
 }
 
 .producto .precio {
     color: #a67c52;
     font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.producto button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: auto; /* empuja el botón al final */
+}
+
+.producto button:hover {
+    background-color: #222;
 }
 
 /* ======= Footer ======= */

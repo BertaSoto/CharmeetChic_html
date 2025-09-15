@@ -539,3 +539,46 @@ body {
     padding: 6px 10px;
     cursor: pointer;
 }
+
+/* === Página en construcción (carrito) === */
+.under-construction {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px 24px;
+    background: #fafafa;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+    text-align: center;
+}
+
+.under-construction h1 {
+    margin: 0 0 10px;
+    font-size: 2rem;
+    color: #2b1c0c;
+}
+
+.under-construction p {
+    color: #5b4a3a;
+    margin: 0 0 24px;
+}
+
+.under-construction .emoji {
+    font-size: 56px;
+    line-height: 1;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.under-construction a.btn {
+    display: inline-block;
+    padding: 12px 18px;
+    background: #c49b63;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background .2s;
+}
+
+.under-construction a.btn:hover {
+    background: #a87d4f;
+}

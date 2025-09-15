@@ -582,3 +582,127 @@ body {
 .under-construction a.btn:hover {
     background: #a87d4f;
 }
+
+/* ===== Registro/Login ===== */
+.auth-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+
+.panel {
+    background: #fff;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, .06);
+}
+
+.panel h3 {
+    margin: 0 0 14px;
+    color: #2b1c0c;
+}
+
+.help {
+    font-size: .9em;
+    color: #6b6b6b;
+}
+
+.inline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.toggle-pass {
+    border: 1px solid #bbb;
+    background: #fff;
+    border-radius: 8px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #c49b63;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 14px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #a87d4f;
+}
+
+/* mensajes de error debajo de inputs */
+.error-msg {
+    color: #b00020;
+    margin-top: 4px;
+    min-height: 18px;
+    /* evita “saltos” cuando aparece el error */
+    display: block;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+    .auth-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* === Buscador global (header) === */
+.iconos {
+    position: relative;
+}
+
+.buscador {
+    position: relative;
+    display: inline-block;
+}
+
+.buscador-input {
+    display: none;
+    /* se muestra al hacer click en el icono */
+    margin-left: 8px;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    min-width: 200px;
+    background: #fff;
+}
+
+.buscador-lista {
+    list-style: none;
+    margin: 4px 0 0;
+    padding: 0;
+    position: absolute;
+    top: 36px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: none;
+    z-index: 1000;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .08);
+}
+
+.buscador-item {
+    padding: 8px 10px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.buscador-item:hover,
+.buscador-item.activo {
+    background: #eee;
+}
+
+/* móvil */
+@media (max-width: 600px) {
+    .buscador-input {
+        min-width: 150px;
+    }
+}
